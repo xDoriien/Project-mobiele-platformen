@@ -1,0 +1,23 @@
+input[type=text]
+{
+    color: #db5644;
+	padding-left: 80px;
+	font:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+input[type=password]
+{
+    color: #db5644;
+	padding-left: 80px;
+	font:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+input[type=submit]
+{
+    color: #db5644;
+	margin-left: 100px;
+	font:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}

@@ -3,13 +3,50 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link href="css/reset.css" rel="stylesheet" type="text/css" />
-<link href="css/mobile.css" rel="stylesheet" type="text/css" media="only screen and (max-width: 320px), only screen and (max-device-width: 320px)" />
+<link href="css/mobile.css" rel="stylesheet" type="text/css" />
 
 <title>3IMDA Truyens Dorien</title>
 </head>
 
 <body>
-	<div id="header"><img src="images/header.png" alt="header"/></div>
+	<div id="header">
+    	<img src="images/header.jpg" alt="header"/>
+    </div>
+    <div id="imd">
+    	<img src="images/imd.png" alt="header"/>
+    </div>
+    <div id="logo"></div>
+  	    <img src="images/logotm.png" alt="header"/>
+    </div>
+    <div id="round" style="margin-left:180px; margin-top:-80px;">
+   		<img src="images/round.png" alt="header"/>
+    </div> 
+    <div id="login" style="margin-left:30px; margin-top:-35px;">
+    <form method="POST">
+  		<input type="text" name="username" size="8" /><br />
+ 	    <input type="password" name="password" size="8" /><br />
+  		<input type="submit" value="Login"  />
+	</form>
+    <?php 
+		include('users.inc.php'); 
+
+		//als formulier verzonden 
+		if (!empty($_POST['username']) && !empty($_POST['password'])) { 
+ 	   	//controleer wachtwoord 
+ 	   		if ($gebruikers[$_POST['username']] == $_POST['password']) { 
+        		//login is gelukt 
+        		$login_correct = TRUE; 
+    		} 
+    	//wachtwoord niet correct 
+    		else { 
+        		$login_error = TRUE; 
+    		} 
+		} 
+	?>
+    </div>
+    <div id="footer">
+   		<img src="images/footer.png" alt="header"/>
+    </div>
     
 </body>
 </html>
