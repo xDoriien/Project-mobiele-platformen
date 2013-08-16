@@ -22,9 +22,9 @@
    		<img src="images/round.png" alt="header"/>
     </div> 
     <div id="login" style="margin-left:30px; margin-top:-35px;">
-    <form method="POST" action="ingelogd.php">
-  		<input type="text" name="username" size="8" /><br />
- 	    <input type="password" name="password" size="8" /><br />
+    <form method="POST" action="check_login.php">
+  		<input type="text" id="myusername" name="myusername" size="8" /><br />
+ 	    <input type="password" id="mypassword" name="mypassword" size="8" /><br />
   		<input type="submit" value="Login"  />
 	</form>
  
