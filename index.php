@@ -22,27 +22,13 @@
    		<img src="images/round.png" alt="header"/>
     </div> 
     <div id="login" style="margin-left:30px; margin-top:-35px;">
-    <form method="POST">
+    <form method="POST" action="ingelogd.php">
   		<input type="text" name="username" size="8" /><br />
  	    <input type="password" name="password" size="8" /><br />
   		<input type="submit" value="Login"  />
 	</form>
-    <?php 
-		include('users.inc.php'); 
+ 
 
-		//als formulier verzonden 
-		if (!empty($_POST['username']) && !empty($_POST['password'])) { 
- 	   	//controleer wachtwoord 
- 	   		if ($gebruikers[$_POST['username']] == $_POST['password']) { 
-        		//login is gelukt 
-        		$login_correct = TRUE; 
-    		} 
-    	//wachtwoord niet correct 
-    		else { 
-        		$login_error = TRUE; 
-    		} 
-		} 
-	?>
     </div>
     <div id="footer">
    		<img src="images/footer.png" alt="header"/>
