@@ -33,7 +33,7 @@
    
     
 
-    <form method="post" action="extraclasses.php" >
+    <form method="post" action="absences.php" >
     <?php
 		mysql_connect('localhost', 'root', 'root');
 		mysql_select_db('Mobiele_platformen');
