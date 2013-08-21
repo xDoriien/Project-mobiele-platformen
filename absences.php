@@ -10,7 +10,7 @@
   	    <img src="images/logotm.png" alt="header"/>
  </div>
  <div id="instellingen" style="margin-left:230px;margin-top:-55px;">
- <a href="main_login.php"><img src="images/tandwiel.jpg" alt="instellingen"/></a>
+ <a href="logout.php"><img src="images/tandwiel.jpg" alt="instellingen"/></a>
  </div>
  <div id="announcements"  style="margin-left:15px;color:#4ba1af;font-family:'Trebuchet MS', Arial, Helvetica, sans-serif">
  <br />

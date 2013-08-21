@@ -6,6 +6,9 @@ $password="root"; // Mysql password
 $db_name="Mobiele_platformen"; // Database name 
 $tbl_name="members"; // Table name 
 
+session_start();
+$_SESSION['views']= array();
+
 // Connect to server and select databse.
 mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
 mysql_select_db("$db_name")or die("cannot select DB");
