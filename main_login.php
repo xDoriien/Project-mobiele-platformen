@@ -4,7 +4,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link href="css/reset.css" rel="stylesheet" type="text/css" />
 <link href="css/mobile.css" rel="stylesheet" type="text/css" />
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="javascript/javascript.js" type='text/javascript'></script>
+<script src="http://malsup.github.com/jquery.form.js"></script>
 <title>3IMDA Truyens Dorien</title>
 </head>
 
@@ -13,43 +15,30 @@
     	<img src="images/tshirt.jpg" alt="header"/>
     </div>
     <div id="selectionbox">
+   	
     <p style="font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#4ba1af; margin-left: 55px;" >Kies uw basisklas:
-    <?php
+	<form method="post" action="checklessons.php" >
+	<?php
 		mysql_connect('localhost', 'root', 'root');
 		mysql_select_db('Mobiele_platformen');
 	
-		$sql = "SELECT name FROM classes";
+		$sql = "SELECT * FROM classes";
 		$result = mysql_query($sql);
 	
-		echo "<select name='name'>";
+		echo "<select id='dropdown' name='dropdownlist'>";
 		while ($row = mysql_fetch_array($result)) {
-		echo "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
+		echo "<option value='" . $row['classes_id'] . "'>" . $row['name'] . "</option>";
 		}
 		echo "</select>";
 	?>
+
     </p>
     </div>
     <div id="klassen" style="margin-top:20px;margin-left:20px;color:#4ba1af;font-family:'Trebuchet MS', Arial, Helvetica, sans-serif">
-   
-    
-
-    <form method="post" action="extraclasses.php" >
-    <?php
-		mysql_connect('localhost', 'root', 'root');
-		mysql_select_db('Mobiele_platformen');
-	
-		$sql = "SELECT name FROM lessons";
-		$result = mysql_query($sql);
-	
-	
-		while ($row = mysql_fetch_array($result)) {
-		echo "<input type='checkbox'" . $row['name'] . "'>" . $row['name'] . "</br> </option>";
-		}
-		echo "</select>";
-	?>
+  
+ 	</div>
         <input type="image" name="submit" value="submit" src="images/volgende_btn.jpg"  style="margin-left:140px; margin-top:10px;" />
 	</form>
- 	</div>
 
 </body>
 </html>
