@@ -14,8 +14,11 @@
 	<div id="header">
     	<img src="images/tshirt.jpg" alt="header"/>
     </div>
+   <form method="post" action="checklessons2.php" >
     <div id="selectionbox">
-    <p style="font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#4ba1af; margin-left: 55px;" >Kies uw basisklas:
+   	
+    <p style="font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#4ba1af; margin-left: 55px;" >Kies een extra klas:
+
 	<?php
 		mysql_connect('localhost', 'root', 'root');
 		mysql_select_db('Mobiele_platformen');
@@ -33,11 +36,9 @@
     </p>
     </div>
     <div id="klassen" style="margin-top:20px;margin-left:20px;color:#4ba1af;font-family:'Trebuchet MS', Arial, Helvetica, sans-serif">
-  	
+  
  	</div>
-    <form method="post" action="absences.php" >
         <input type="image" name="submit" value="submit" src="images/volgende_btn.jpg"  style="margin-left:140px; margin-top:10px;" />
 	</form>
-
 </body>
 </html>
