@@ -14,10 +14,11 @@
 	<div id="header">
     	<img src="images/tshirt.jpg" alt="header"/>
     </div>
+    <form method="post" action="checklessons.php" >
     <div id="selectionbox">
    	
     <p style="font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#4ba1af; margin-left: 55px;" >Kies uw basisklas:
-	<form method="post" action="checklessons.php" >
+
 	<?php
 		mysql_connect('localhost', 'root', 'root');
 		mysql_select_db('Mobiele_platformen');

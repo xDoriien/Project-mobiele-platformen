@@ -8,9 +8,7 @@ $lessons=array();
 
     foreach($lessons as $key => $value)
    	 {	
-	 	echo $value;
+	 	$_SESSION['views'] = $value;
+		header("Location: extraclasses.php");
 	 }
-
-//die(print_r($arr));
-//header("location:extraclasses.php");
 ?>
