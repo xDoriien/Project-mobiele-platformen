@@ -11,7 +11,7 @@
 	
 	
 		while ($row = mysql_fetch_array($result)) {
-			$checkbox_list .= "<input name='lesson[]' type='checkbox' value='" . $row['name'] . "'>" . $row['name'] . "</br>";
+			$checkbox_list .= "<input name='lesson[]' type='checkbox' value='" . $row['lessons_id'] . "'>" . $row['name'] . "</br>";
 		}
 		
 		echo $checkbox_list;
